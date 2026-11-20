@@ -61,7 +61,7 @@ const loginUser = async (req, res) => {
              password:user.password,
              role: user.role,
            },
-           process.env.secret_key,
+           process.env.SECRET_KEY,
            { expiresIn: "24hr" },
          );
         return res.status(200).json({ success:true,messgae:"login successfully",token})
